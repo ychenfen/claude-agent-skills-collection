@@ -1,0 +1,57 @@
+# 报名资料包模板
+# 说明：
+# 1. 本文件是明文，不要写入密码、验证码、银行卡号、支付信息。
+# 2. 身份证号等敏感字段若不想落盘，填 "现场提供"，填表时 Claude 会现问。
+# 3. 缺失的信息填 "待补"，不要留空猜测。
+# 4. 文件路径一律用绝对路径。
+
+meta:
+  owner: ""                 # 资料包属于谁
+  updated: ""               # 最近核对日期 YYYY-MM-DD
+  notes: ""                 # 备注，如"证件照为近期蓝底"
+
+identity:
+  legal_name: ""            # 证件姓名
+  date_of_birth: ""         # YYYY-MM-DD
+  gender: ""                # 仅在报名需要时填写
+  nationality: ""
+  id_type: ""               # 居民身份证 / 护照 / ...
+  id_number: ""             # 敏感，可填 "现场提供"
+
+contact:
+  phone: ""
+  email: ""
+  province_city: ""
+  address: ""
+  postal_code: ""
+  emergency_contact:
+    name: ""
+    relation: ""
+    phone: ""
+
+background:
+  education:
+    school: ""
+    major: ""
+    degree: ""
+    graduation_date: ""     # YYYY-MM
+  work:
+    employer: ""
+    title: ""
+    start_date: ""
+  certificates: []          # 如 ["CET-4 xxx分", "计算机二级"]
+  experience_summary: ""    # 一段话，供长文本字段使用
+
+preferences:
+  category: ""              # 报考类别 / 岗位 / 项目
+  location: ""              # 考点 / 报名地区偏好
+  session: ""               # 场次 / 批次偏好
+  other: ""
+
+files:
+  photo: ""                 # 证件照绝对路径
+  resume: ""                # 简历
+  id_scan: ""               # 证件扫描件
+  certificates: []          # 其他证明材料路径列表
+
+pending: []                 # 待补清单，如 ["政治面貌", "户籍所在地"]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信公众号付费合集归档"
+  short_description: "将已解锁公众号合集安全导出为离线网页与本地图片"
+  default_prompt: "Use $wechat-paid-album-archive to archive an already unlocked WeChat Official Account collection locally and verify the result."

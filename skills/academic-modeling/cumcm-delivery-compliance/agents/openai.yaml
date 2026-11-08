@@ -1,0 +1,4 @@
+interface:
+  display_name: "国赛数模交付合规审计"
+  short_description: "审计高教社杯全国大学生数学建模竞赛论文PDF、AI使用说明、附录代码与最终提交ZIP包"
+  default_prompt: "Use $cumcm-delivery-compliance to audit our mathematical modeling paper PDF, AI-use declaration, code appendix, and submission ZIP package."

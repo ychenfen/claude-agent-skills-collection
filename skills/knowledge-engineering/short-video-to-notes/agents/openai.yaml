@@ -1,0 +1,4 @@
+interface:
+  display_name: "短视频与录屏转结构化笔记"
+  short_description: "将短视频链接或本地音视频通过本地ASR转写为YAML结构化Markdown笔记与SRT字幕"
+  default_prompt: "使用 $short-video-to-notes 将这段视频/转写稿整理为带 YAML frontmatter、核心结论、常见同音术语校正和折叠逐字稿的 Markdown 笔记。"

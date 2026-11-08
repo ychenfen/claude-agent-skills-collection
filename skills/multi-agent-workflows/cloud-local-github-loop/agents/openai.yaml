@@ -1,0 +1,4 @@
+interface:
+  display_name: "云端×本地 GitHub Runner 协同闭环"
+  short_description: "云端Agent通过GitHub自托管Runner安全派发本地算力任务、守卫5MB与密钥门禁、离线排队.ai/next_task.md"
+  default_prompt: "Use $cloud-local-github-loop to dispatch this task to our local self-hosted GitHub runner (or queue .ai/next_task.md if offline) while enforcing the 5MB and secret guardrails."

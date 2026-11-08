@@ -1,0 +1,4 @@
+interface:
+  display_name: "Boss直聘求职代办"
+  short_description: "搜索职位、点开详情核对匹配度、批量打招呼、盯消息起草回复"
+  default_prompt: "使用 $boss-zhipin 按我的求职画像搜索职位，点开详情逐条核对匹配度后给我候选清单，我圈定后再批量打招呼，发任何消息前先给我确认。"

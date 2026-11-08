@@ -1,0 +1,4 @@
+interface:
+  display_name: "浏览器报名代办"
+  short_description: "先整理并核对资料包，再自动打开浏览器匹配字段和填写报名表"
+  default_prompt: "使用 $browser-form-registration 先帮我整理并核对全部报名资料，再打开报名网页自动填写，最终提交前让我确认。"

@@ -1,0 +1,32 @@
+name: Validate Agent Skills Collection
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run skill linter and Python syntax validator
+        run: python3 scripts/validate_skills.py
+      - name: Run 5MB and secret guardrails check
+        run: python3 skills/multi-agent-workflows/cloud-local-github-loop/scripts/check_guardrails.py .
+      - name: Test installer (--list and --all into temporary target)
+        run: |
+          chmod +x install.sh
+          ./install.sh --list
+          ./install.sh --all --target both --dest /tmp/skills-test
+          test -f /tmp/skills-test/claude/skills/gmcm-paper/SKILL.md
+          test -f /tmp/skills-test/codex/skills/gmcm-paper/agents/openai.yaml
+          test -f /tmp/skills-test/claude/skills/cloud-local-github-loop/SKILL.md

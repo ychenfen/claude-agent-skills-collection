@@ -1,0 +1,4 @@
+interface:
+  display_name: "简历撰写"
+  short_description: "从材料提炼经历，按 JD 定制中文简历，输出 docx"
+  default_prompt: "使用 $resume-writer 根据我的资料包和这份 JD 写一份定制简历，先给我匹配度分析。"

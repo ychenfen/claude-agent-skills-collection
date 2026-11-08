@@ -1,0 +1,4 @@
+interface:
+  display_name: "国赛统计建模DOCX自动排版"
+  short_description: "一键将Pandoc生成的中文学术论文DOCX改造为全国大学生统计建模大赛标准排版格式"
+  default_prompt: "使用 $guosai-docx-format 将这份 Pandoc 导出的论文 .docx 自动改造为全国大学生统计建模大赛提交格式并校验。"

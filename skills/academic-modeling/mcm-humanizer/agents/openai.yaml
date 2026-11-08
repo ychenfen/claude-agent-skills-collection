@@ -1,0 +1,4 @@
+interface:
+  display_name: "美赛MCM/ICM论文去AI味润色"
+  short_description: "消除英文数学建模论文中的AI套话与机械句式，保留数学严谨性与LaTeX公式"
+  default_prompt: "Use $mcm-humanizer to rewrite this MCM/ICM mathematical modeling section so it reads naturally with concrete metrics and zero AI clichés."

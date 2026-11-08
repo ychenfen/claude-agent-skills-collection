@@ -1,0 +1,4 @@
+interface:
+  display_name: "华为杯数模全流程打法"
+  short_description: "研究生数学建模从读题、基线、模型冻结、去AI味写作到提交包校验的全流程工作流"
+  default_prompt: "使用 $gmcm-paper 规划并执行研究生数学建模竞赛（GMCM）建模、论文撰写、去AI味润色与提交前合规体检。"

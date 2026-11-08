@@ -1,0 +1,4 @@
+interface:
+  display_name: "竞赛模型质量冻结与复现门禁"
+  short_description: "竞赛实验防泄漏检查、双次运行哈希复核、边界用例覆盖与结果冻结门禁"
+  default_prompt: "Use $competition-model-quality-freeze to audit our modeling experiment status, verify reproducibility hashes, and freeze results before writing the paper."
