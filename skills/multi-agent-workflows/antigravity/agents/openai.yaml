@@ -1,0 +1,4 @@
+interface:
+  display_name: "Antigravity Gemini 三通道派单"
+  short_description: "通过本地文件桥向 Gemini 派任务、核查心跳并独立验收交付，支持三个隔离通道"
+  default_prompt: "Use $antigravity to dispatch this authorized task to an Antigravity Gemini session and independently verify its delivery."

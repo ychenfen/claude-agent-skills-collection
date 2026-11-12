@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate all 12 skills in claude-agent-skills-collection.
+"""Validate all skills in claude-agent-skills-collection.
 
 Checks:
 1. Valid SKILL.md YAML frontmatter (`name` matches directory name, non-empty `description`)

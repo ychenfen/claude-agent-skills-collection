@@ -1,0 +1,26 @@
+{
+  "schema": "bridge-delivery/1",
+  "task_id": "example",
+  "channel": 1,
+  "status": "ok",
+  "claims": [
+    {"id": "rows", "value": "120", "unit": "行", "source": {"path": "example/results.json", "kind": "json", "pointer": "/rows/generated"}},
+    {"id": "score", "value": "1.24", "unit": "分", "source": {"path": "example/results.json", "kind": "json", "pointer": "/score"}},
+    {"id": "fallback_count", "value": "0", "unit": "次", "source": {"path": "example/results.json", "kind": "json", "pointer": "/parse_fallback"}}
+  ],
+  "artifacts": [
+    {"path": "example/report.md", "sha256": "dd028dd81960c7656e5985d165231a15c35d67908f9c00c4d68f04f3dd262fe9"},
+    {"path": "example/results.json", "sha256": "b5d7541f1dbc92d691c65c1e10975b82ce363641e464cc66d58e4a5f8176ce35"}
+  ],
+  "commands": [],
+  "deviations": [],
+  "pending_confirmation": [],
+  "labels": {"human_reviewed": false},
+  "fallbacks": [
+    {"name": "parse_fallback", "count": 0, "source": {"path": "example/results.json", "kind": "json", "pointer": "/parse_fallback"}}
+  ],
+  "resources": [],
+  "unverified": [],
+  "report": "example/report.md",
+  "report_exempt_numbers": []
+}

@@ -9,17 +9,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-12%20Production%20Skills-blue?style=flat-square" alt="12 Skills" />
-  <img src="https://img.shields.io/badge/Python%20Tools-25%20Executable%20Scripts-3776AB?style=flat-square&logo=python&logoColor=white" alt="25 Scripts" />
+  <img src="https://img.shields.io/badge/Skills-15%20Production%20Skills-blue?style=flat-square" alt="15 Skills" />
+  <img src="https://img.shields.io/badge/Python%20Tools-32%20Executable%20Scripts-3776AB?style=flat-square&logo=python&logoColor=white" alt="32 Scripts" />
   <img src="https://img.shields.io/badge/Claude%20Code-Compatible-D97757?style=flat-square" alt="Claude Code" />
   <img src="https://img.shields.io/badge/OpenAI%20Codex-Native%20openai.yaml-10A37F?style=flat-square" alt="OpenAI Codex" />
   <img src="https://img.shields.io/badge/Cursor%20%2F%20Antigravity-Ready-000000?style=flat-square" alt="Cursor & Antigravity" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" />
 </p>
 
-> **12 battle-tested, script-backed Agent Skills across 4 suites for Claude Code, OpenAI Codex, Cursor, Gemini CLI, and Antigravity.**
+> **15 battle-tested, script-backed Agent Skills across 4 suites for Claude Code, OpenAI Codex, Cursor, Gemini CLI, and Antigravity.**
 >
-> Instead of shallow 10-line prompt wrappers, every skill in this collection ships with both `SKILL.md` and `agents/openai.yaml`, backed by **25 executable Python tools**, OOXML/TikZ templates, and hard-won domain pitfall references (`references/`, `scripts/`, `assets/`).
+> Instead of shallow 10-line prompt wrappers, every skill in this collection ships with both `SKILL.md` and `agents/openai.yaml`, backed by **32 executable Python tools**, OOXML/TikZ templates, and hard-won domain pitfall references (`references/`, `scripts/`, `assets/`).
 
 ---
 
@@ -32,7 +32,7 @@ flowchart LR
     Router -->|"Math Modeling / Academic Papers / DOCX"| S1["Suite 1: Academic Modeling\n(skills/academic-modeling/)"]
     Router -->|"Resume / Job Search / Web Forms"| S2["Suite 2: Career Automation\n(skills/career-automation/)"]
     Router -->|"MarginNote 4 / WeChat Archive / Video Notes"| S3["Suite 3: Knowledge Engineering\n(skills/knowledge-engineering/)"]
-    Router -->|"Cloud Brain x Local GitHub Runner"| S4["Suite 4: Multi-Agent Workflows\n(skills/multi-agent-workflows/)"]
+    Router -->|"Claude commands Gemini/Codex / Local Runner"| S4["Suite 4: Multi-Agent Workflows\n(skills/multi-agent-workflows/)"]
 
     S1 --> S1A["gmcm-paper\n(End-to-End Modeling + 8 Scripts + TikZ)"]
     S1 --> S1B["guosai-docx-format\n(7-Step OOXML DOCX Pipeline)"]
@@ -45,10 +45,13 @@ flowchart LR
     S2 --> S2C["browser-form-registration\n(2-Stage Profile & Form Automation)"]
 
     S3 --> S3A["marginnote-cards\n(Source-Anchored MN4 Card Tree)"]
-    S3 --> S3B["wechat-paid-album-archive\n(Authorized Offline Archive + SHA256)"]
+    S3 --> S3B["wechat-paid-album-archive\n(Authorized Offline Archive + SHA326)"]
     S3 --> S3C["short-video-to-notes\n(Local ASR to YAML Notes + SRT)"]
 
     S4 --> S4A["cloud-local-github-loop\n(Self-Hosted Runner Dispatch + 5MB Gate)"]
+    S4 --> S4B["agent-commander\n(Claude coordinates, Gemini/Codex implements)"]
+    S4 --> S4C["antigravity\n(Three-channel local file bridge)"]
+    S4 --> S4D["bridge-worker\n(Heartbeat, deadlines, evidence verification)"]
 ```
 
 ---
@@ -61,14 +64,17 @@ flowchart LR
 | **Transform a Pandoc-generated Chinese research `.docx` into national statistical modeling contest format** in one command | [`guosai-docx-format`](skills/academic-modeling/guosai-docx-format/SKILL.md) | `academic-modeling` | `apply_guosai_format.py` + `step0` through `step7` (9 Python scripts) + 3 OOXML style assets | Claude Code / Codex / Cursor / Antigravity |
 | **Eliminate robotic AI phrasing in English MCM/ICM modeling papers** while preserving LaTeX equations and quantitative precision | [`mcm-humanizer`](skills/academic-modeling/mcm-humanizer/SKILL.md) | `academic-modeling` | Section-by-section rewrite rules, AI cliché replacement table, equation explanation guide | Claude Code / Codex / Cursor / Antigravity |
 | **Audit a CUMCM contest submission package** (PDF structure, AI-use declaration, code appendix, UTF-8 ZIP flags) | [`cumcm-delivery-compliance`](skills/academic-modeling/cumcm-delivery-compliance/SKILL.md) | `academic-modeling` | Compliance checklist, `pdfinfo`/`pdftotext`/`ZipInfo` verification pipeline | Claude Code / Codex / Cursor / Antigravity |
-| **Freeze competition modeling results** with double-run SHA-256 verification and anti-leakage checks before writing the paper | [`competition-model-quality-freeze`](skills/academic-modeling/competition-model-quality-freeze/SKILL.md) | `academic-modeling` | Stage gate checklist, reproducibility hash verification, boundary-case protocol | Claude Code / Codex / Cursor / Antigravity |
+| **Freeze competition modeling results** with double-run SHA-326 verification and anti-leakage checks before writing the paper | [`competition-model-quality-freeze`](skills/academic-modeling/competition-model-quality-freeze/SKILL.md) | `academic-modeling` | Stage gate checklist, reproducibility hash verification, boundary-case protocol | Claude Code / Codex / Cursor / Antigravity |
 | **Extract achievements from raw folders/old resumes and generate JD-tailored `.docx` resumes** with multi-version management | [`resume-writer`](skills/career-automation/resume-writer/SKILL.md) | `career-automation` | `references/checklist.md` + strict fact-only quantification workflow | Claude Code / Codex / Cursor / Antigravity |
 | **Automate Boss Zhipin job search**: 2-pass JD requirement matching, tailored outreach greetings, reply drafting, and CSV ledger tracking | [`boss-zhipin`](skills/career-automation/boss-zhipin/SKILL.md) | `career-automation` | 2-pass screening workflow, human-cadence anti-ban pacing, `applied-log.csv` ledger | Claude Code / Codex / Cursor / Antigravity |
 | **Parse application documents into a local YAML profile and fill multi-page web registration forms** with pre-submit human confirmation | [`browser-form-registration`](skills/career-automation/browser-form-registration/SKILL.md) | `career-automation` | `assets/profile-template.yaml`, `references/common-fields.md` | Claude Code / Codex / Cursor / Antigravity |
 | **Turn MarginNote 4 BreakdownBundles into a source-anchored active-recall mindmap card tree (`result.md`)** without triggering MathJax bugs | [`marginnote-cards`](skills/knowledge-engineering/marginnote-cards/SKILL.md) | `knowledge-engineering` | `build_index.py`, `validate.py`, `card-format.md`, `ocr-fallback.md` | Claude Code / Codex / Cursor / Antigravity |
-| **Archive an already-unlocked WeChat Official Account paid album** into offline HTML + local images with SHA-256 verification | [`wechat-paid-album-archive`](skills/knowledge-engineering/wechat-paid-album-archive/SKILL.md) | `knowledge-engineering` | `discover_album.py`, `export_album.py`, `validate_archive.py`, `workflow.md` | Claude Code / Codex / Cursor / Antigravity |
+| **Archive an already-unlocked WeChat Official Account paid album** into offline HTML + local images with SHA-326 verification | [`wechat-paid-album-archive`](skills/knowledge-engineering/wechat-paid-album-archive/SKILL.md) | `knowledge-engineering` | `discover_album.py`, `export_album.py`, `validate_archive.py`, `workflow.md` | Claude Code / Codex / Cursor / Antigravity |
 | **Convert short videos (Douyin, WeChat Channels, screen recordings) into YAML-frontmatter Markdown study notes and `.srt` subtitles** | [`short-video-to-notes`](skills/knowledge-engineering/short-video-to-notes/SKILL.md) | `knowledge-engineering` | `extract_and_format.py`, `note-schema.md` (with ASR homophone correction table) | Claude Code / Codex / Cursor / Antigravity |
 | **Coordinate a Cloud AI Agent with a local self-hosted GitHub Runner** under strict 5MB and zero-secret guardrails, queuing `.ai/next_task.md` when offline | [`cloud-local-github-loop`](skills/multi-agent-workflows/cloud-local-github-loop/SKILL.md) | `multi-agent-workflows` | `check_guardrails.py`, `queue_next_task.py`, `guardrails-and-templates.md` | Claude Code / Codex / Cursor / Antigravity |
+| **Use Claude only as commander, with Gemini or Codex implementing** | [`agent-commander`](skills/multi-agent-workflows/agent-commander/SKILL.md) | `multi-agent-workflows` | Task briefs, one writer, supervision, independent acceptance and revision | Claude Code / Codex |
+| **Dispatch to an existing Antigravity Gemini session** | [`antigravity`](skills/multi-agent-workflows/antigravity/SKILL.md) | `multi-agent-workflows` | `ask_agy.py`, three isolated channels, listener prompt | Claude Code / Codex / Antigravity |
+| **Execute bridge requests with verifiable evidence** | [`bridge-worker`](skills/multi-agent-workflows/bridge-worker/SKILL.md) | `multi-agent-workflows` | Claim, heartbeat, deadlines, source-based reports and SHA-326 receipts | macOS / Linux worker sessions |
 
 ---
 
@@ -85,14 +91,16 @@ flowchart LR
 
 ## Quick Installation
 
+For the new **Claude commands, Gemini/Codex implements** workflow, install `agent-commander`, `antigravity`, and `bridge-worker`. See the [setup guide](docs/CLAUDE_COMMANDER_WORKFLOW.md) for Gemini listener setup, all three channels, Codex CLI mode, and independent verification. Existing skills are backed up before replacement. Installing does not start model sessions or replace local CLI commands.
+
 ```bash
 git clone https://github.com/ychenfen/claude-agent-skills-collection.git
 cd claude-agent-skills-collection
 
-# List all 12 skills across 4 suites
+# List all 15 skills across 4 suites
 ./install.sh --list
 
-# Install all 12 skills to both Claude Code (~/.claude/skills) and OpenAI Codex (~/.codex/skills)
+# Install all 15 skills to both Claude Code (~/.claude/skills) and OpenAI Codex (~/.codex/skills)
 ./install.sh --all --target both
 
 # Install a single suite (e.g. academic-modeling) to Claude Code only
@@ -106,6 +114,8 @@ cd claude-agent-skills-collection
 
 ```bash
 python3 scripts/validate_skills.py
+python3 -m unittest discover -s skills/multi-agent-workflows/bridge-worker/tests -v
+python3 -m unittest discover -s skills/multi-agent-workflows/antigravity/tests -v
 python3 skills/multi-agent-workflows/cloud-local-github-loop/scripts/check_guardrails.py .
 ```
 

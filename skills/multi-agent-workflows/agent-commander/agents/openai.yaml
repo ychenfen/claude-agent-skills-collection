@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude 指挥 Gemini / Codex"
+  short_description: "Claude 拆解与派单，Gemini 或 Codex 实施，独立验收并退回返修"
+  default_prompt: "Use $agent-commander to coordinate this project with Claude as commander and Gemini or Codex as the sole implementation worker."

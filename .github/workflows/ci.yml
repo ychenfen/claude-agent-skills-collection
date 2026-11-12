@@ -20,6 +20,10 @@ jobs:
           python-version: "3.12"
       - name: Run skill linter and Python syntax validator
         run: python3 scripts/validate_skills.py
+      - name: Test bridge evidence checks and three-channel round trips
+        run: |
+          python3 -m unittest discover -s skills/multi-agent-workflows/bridge-worker/tests -v
+          python3 -m unittest discover -s skills/multi-agent-workflows/antigravity/tests -v
       - name: Run 5MB and secret guardrails check
         run: python3 skills/multi-agent-workflows/cloud-local-github-loop/scripts/check_guardrails.py .
       - name: Test installer (--list and --all into temporary target)
@@ -30,3 +34,10 @@ jobs:
           test -f /tmp/skills-test/claude/skills/gmcm-paper/SKILL.md
           test -f /tmp/skills-test/codex/skills/gmcm-paper/agents/openai.yaml
           test -f /tmp/skills-test/claude/skills/cloud-local-github-loop/SKILL.md
+          test -f /tmp/skills-test/claude/skills/agent-commander/SKILL.md
+          test -f /tmp/skills-test/codex/skills/antigravity/scripts/ask_agy.py
+          test -f /tmp/skills-test/claude/skills/bridge-worker/scripts/bw_verify.py
+          echo preserve-local-customization > /tmp/skills-test/claude/skills/agent-commander/local-marker
+          ./install.sh --skill agent-commander --target claude --dest /tmp/skills-test
+          test "$(find /tmp/skills-test/claude/skill-backups -name local-marker | wc -l)" -eq 1
+          test ! -f /tmp/skills-test/claude/skills/agent-commander/local-marker

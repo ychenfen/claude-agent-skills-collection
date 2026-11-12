@@ -26,7 +26,7 @@ Suites:
   academic-modeling       (5 skills: gmcm-paper, cumcm-delivery-compliance, mcm-humanizer, competition-model-quality-freeze, guosai-docx-format)
   career-automation       (3 skills: resume-writer, boss-zhipin, browser-form-registration)
   knowledge-engineering   (3 skills: marginnote-cards, wechat-paid-album-archive, short-video-to-notes)
-  multi-agent-workflows   (1 skill:  cloud-local-github-loop)
+  multi-agent-workflows   (4 skills: agent-commander, antigravity, bridge-worker, cloud-local-github-loop)
 
 Targets:
   claude   Install into ~/.claude/skills/<skill-name>
@@ -142,7 +142,14 @@ install_one_skill() {
       echo "[dry-run] Would copy $src_dir -> $target_dir"
     else
       mkdir -p "$dest_base"
-      rm -rf "$target_dir"
+      if [ -e "$target_dir" ] || [ -L "$target_dir" ]; then
+        local backup_base="$dest_base/../skill-backups"
+        mkdir -p "$backup_base"
+        local backup_dir
+        backup_dir="$(mktemp -d "$backup_base/$name.$(date -u +%Y%m%dT%H%M%SZ).XXXXXX")"
+        mv "$target_dir" "$backup_dir/$name"
+        echo "Backup: $backup_dir/$name"
+      fi
       cp -R "$src_dir" "$target_dir"
       echo "Installed: $name -> $target_dir"
     fi

@@ -1,0 +1,4 @@
+interface:
+  display_name: "文件桥执行与证据交付"
+  short_description: "认领自己的通道任务，监督长命令、回源报告数字，核验产物后交付结构化回执"
+  default_prompt: "Use $bridge-worker to claim this channel's request, execute within the task brief, and publish a verified delivery.json receipt."
